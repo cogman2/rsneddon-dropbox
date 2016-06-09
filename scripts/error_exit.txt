@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# a basic function to ls/rm a directory and check for error
+
+error_exit()
+{
+    echo "$1" "$2" 1>&2
+    exit 1
+}
+
+#writing the program with invocation of the error
+
+echo -n  "which directory to you want listed: "
+read directory
+if [ -d $directory ]; then
+    echo "Directory listings are: "
+    echo "$(ls -l $directory)"
+else
+    error_exit "Cannot find directory! Aborting."
+fi

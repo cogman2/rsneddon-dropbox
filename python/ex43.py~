@@ -1,0 +1,81 @@
+# Skeleton Code for the Game Engine
+#
+import pdb
+pdb.set_trace()
+
+class Scene(object):
+    
+    def __init__(self, my_scene):
+        self.my_scene = my_scene
+
+    def enter(self):
+        pass
+
+class Engine(object):
+        self.action = {'Death':'Big monster', 'CentralCorridor':'Many Doors', 'LaserWeaponArmory':'Lots of Weapons', 'TheBridge':'Spock is waiting', 'EscapePod':'You made it!'}
+    def __init__(self, map):
+        self.map = map
+
+    def play(self):
+        print self.action[map]
+        if map == 'Death':
+            self.my_scene = Death()
+        elif map == 'CentralCorridor':
+            self.my_scene = CentralCorridor()
+        elif map == 'LaserWeaponArmory':
+            self.my_scene = LaserWeaponArmory()
+        elif map == 'TheBridge':
+            self.my_scene = TheBridge()
+        else:
+            self.my_scene = EscapePod()
+        self.my_scene.action()
+    
+
+class Death(Scene):
+
+    def __init__(self, scene_name = "Death"):
+        self.scene_name = scene_name
+
+    def action(self):
+        print "This is the Death Scene."
+
+class CentralCorridor(Scene):
+
+    def __init__(self, scene_name = "CentralCorridor"):
+        self.scene_name = scene_name
+
+    def action(self):
+        print "This is the Central Corridor scene."
+
+class TheBridge(Scene):
+
+    def __init__(self, scene_name = "TheBridge"):
+        self.scene_name = scene_name
+
+    def action(self):
+        print "This is TheBridge scene."
+
+class EscapePod(Scene):
+
+    def __init__(self, scene_name = "EscapePod"):
+        self.scene_name = scene_name
+
+    def action(self):
+        print "This is the EscapePod scene."
+
+class Map(object):
+
+    self.map = {'Death':0, 'CentralCorridor':1, 'LaserWeaponArmory':2, 'TheBridge':3, 'EscapePod':4}
+    
+    def __init__(self, start_scene = 'CentralCorridor'):
+        self.start_scene = start_scene
+
+    def next_scene(self, scene_name):
+        self.next_scene = scene_name
+
+    def opening_scene(self):
+        self.opening_scene = 'CentralCorridor'
+
+a_map = Map('cenral_corridor')
+a_game =  Engine(a_map)
+a_game.play()

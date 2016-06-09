@@ -1,0 +1,8 @@
+#!/bin/bash
+# Using bash 4.0
+#ls | sed -e /^$/d
+myFiles=$(ls /Users/robertsneddon/DeepLearn/Working/scripts)
+echo $myFiles
+sed -e '/\.sh *$/P' $myFiles
+
+exit

@@ -1,0 +1,6 @@
+This is the first line of the file
+
+After a blank line, this is the third line.
+Another line
+
+I left the 5th line blank to.
