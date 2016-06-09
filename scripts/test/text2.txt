@@ -1,0 +1,16 @@
+this is the first line
+
+0
+
+
+4
+
+16
+36
+64
+
+100
+
+
+two trillion
+this is the last line

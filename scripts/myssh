@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ $# -eq 2 ]; then
+    PROFILE="$1";shift;
+elif [ $# -eq 3 ]; then
+    PROFILE="$1 $2";shift;shift;
+fi
+DEF="Basic" #the default profile name
+echo "tell app \"Terminal\" to set current settings of first window to settings set \"${PROFILE}\""|osascript
+ssh $@
+echo "tell app \"Terminal\" to set current settings of first window to settings set \"${DEF}\""|osascript

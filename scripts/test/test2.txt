@@ -1,0 +1,4 @@
+Username:Firstname:Lastname:Telephone number
+rsneddon:Robert:Sneddon:6265909555
+keibonn:Kei:Hatanaka:6265906522
+fjones:Fred:Jones:7143289837
