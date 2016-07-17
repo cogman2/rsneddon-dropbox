@@ -7,6 +7,10 @@ class Rooms(object):
     def __init__(self):
         self.rooms_map = {'lobby':Lobby(), 'hallway':Hallway(), 'sinking':Sinking(), 'spiked_ceiling':Spiked_ceiling(), 'dungeon':Dungeon(), 'moving_walls':Moving_walls, 'escape_tunnel':Escape_tunnel()}
 
+    @abstractmethod
+    def play(self):
+        pass
+
 
 class Lobby(Rooms):
 
