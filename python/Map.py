@@ -1,6 +1,6 @@
 #
 # The interface for the game
-#
+from Rooms import *
 from random import randint
 class Map(object):
     scenes = {
@@ -22,5 +22,3 @@ class Map(object):
 
     def opening_scene(self):
         return self.next_scene(self.start_scene)
-
-

@@ -7,14 +7,14 @@ class Rooms(object):
     def __init__(self):
         self.rooms_map = {'lobby':Lobby(), 'hallway':Hallway(), 'sinking':Sinking(), 'spiked_ceiling':Spiked_ceiling(), 'dungeon':Dungeon(), 'moving_walls':Moving_walls, 'escape_tunnel':Escape_tunnel()}
 
-    @abstractmethod
+#    @abstractmethod
     def play(self):
         pass
 
 
 class Lobby(Rooms):
 
-    __init__(self):
+    def __init__(self):
         pass
 
     def play(self):
@@ -22,7 +22,7 @@ class Lobby(Rooms):
 
 class Hallway(Rooms):
 
-    __init__(self):
+    def __init__(self):
         pass
 
     def play(self):
@@ -31,7 +31,7 @@ class Hallway(Rooms):
 
 class Sinking(Rooms):
 
-    __init__(self):
+    def __init__(self):
         pass
 
     def play(self):
@@ -40,7 +40,7 @@ class Sinking(Rooms):
 
 class Spiked_ceiling(Rooms):
 
-    __init__(self):
+    def __init__(self):
         pass
 
     def play(self):
@@ -49,7 +49,7 @@ class Spiked_ceiling(Rooms):
 
 class Dungeon(Rooms):
 
-    __init__(self):
+    def __init__(self):
         pass
 
     def play(self):
@@ -58,7 +58,7 @@ class Dungeon(Rooms):
 
 class Moving_walls(Rooms):
 
-    __init__(self):
+    def __init__(self):
         pass
 
     def play(self):
@@ -67,7 +67,7 @@ class Moving_walls(Rooms):
 
 class Escape_tunnel(Rooms):
 
-    __init__(self):
+    def __init__(self):
         pass
 
     def play(self):
