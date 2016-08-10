@@ -1,14 +1,14 @@
 # This is the "make the game" exercise.
 # Do it well!
 #
-import Rooms  # the data
-import Runner # the interface
+from Rooms import *  # the data
+from Map import * # the interface
 
 class Engine(object): # the controller
    
-    def __init__(self, rooms_map):
-        self.rooms_map = rooms_map
-        self.runner = Runner()
+    def __init__(self, start_map):
+        self.start_map  = start_map
+        self.rooms_map = Map('lobby')
 
     def play(self):
         current_room = self.rooms_map.opening_scene()
@@ -16,5 +16,5 @@ class Engine(object): # the controller
     
     current_room.enter()
 
-rooms_map = Rooms()
+rooms_map = Map()
 game = Engine(rooms_map)
