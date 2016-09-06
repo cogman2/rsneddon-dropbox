@@ -1,13 +1,17 @@
 #
 # This is the Class Rooms which is the interface.
+# The various rooms are called by the Engine class.
+# Here, they are initialized for relevant data and
+# then interact with the player.
+# The essential method is 'enter' where the player interacts with the game.
 #
+
 import pudb
 from random import randint
 
 class Rooms(object):
 
 
-#    @abstractmethod
     def play(self):
         pass
 
@@ -100,7 +104,7 @@ class Sinking(Rooms):
             quit()
 
 
-class Spiked_ceiling(Rooms):
+class SpikedCeiling(Rooms):
 
     def __init__(self):
         pass
@@ -118,7 +122,7 @@ class Dungeon(Rooms):
         print "You are in the Dungeon"
 
 
-class Moving_walls(Rooms):
+class MovingWalls(Rooms):
 
     def __init__(self):
         pass
@@ -127,10 +131,12 @@ class Moving_walls(Rooms):
         print "You are in the Moving Walls room"
 
 
-class Escape_tunnel(Rooms):
+class EscapeTtunnel(Rooms):
 
     def __init__(self):
         pass
 
     def enter(self):
         print "You are in the Escape Tunnel"
+        print "You run for the sunlight, survivig the horrors behind you."
+        print "You did it!"

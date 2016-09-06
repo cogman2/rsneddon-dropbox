@@ -1,5 +1,8 @@
 #
 # The interface for the game
+#  Map give the ordering of the rooms in the game via 'rooms_list'
+# and walks players through the rooms via 'next_room'
+#
 from Rooms import *
 from random import randint
 import pudb
@@ -8,20 +11,14 @@ rooms = {
         'lobby': Lobby(),
         'hallway': Hallway(),
         'sinking': Sinking(),
-        'spiked_ceiling': Spiked_ceiling(),
-        'dungeon': Dungeon(),
-        'moving_walls': Moving_walls(),
-        'escape_tunnel': Escape_tunnel()
+        'escape_tunnel': EscapeTunnel()
     }
 
 rooms_list = [
         'lobby',
         'hallway',
         'sinking',
-        'spiked_ceiling',
-        'dungeon',
-        'moving_walls',
-        'escape_tunnel' ]
+        'escapetunnel' ]
     
 class Map(object):
 
@@ -31,14 +28,12 @@ class Map(object):
 
     def get_room(self, room_name):
         self.position = rooms_list.index(room_name)
-#        print "In get_room, the room is: ", room_name, rooms[room_name]
         return rooms[room_name]
 
     def next_room(self):
         if self.position >= len(rooms_list):
             print  "At the end"
         else:
-#            print "In Map object, position is: ", self.position
             room_name = rooms_list[self.position + 1]
         return self.get_room(room_name)
 
