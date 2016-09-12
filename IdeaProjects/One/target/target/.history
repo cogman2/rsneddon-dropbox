@@ -1,0 +1,6 @@
+compile
+clean
+";clean ;compile; run"
+;clean ;compile; run
+clean
+exit

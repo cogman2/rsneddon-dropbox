@@ -1,0 +1,13 @@
+compile
+clean
+exit
+run
+exit
+run
+last compile:run
+clean
+compile
+run
+test
+pwd
+exit
